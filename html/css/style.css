@@ -36,6 +36,10 @@ a:hover, .btn-link:hover {
   color: #000;
 }
 
+.logo {
+  padding-left: 15px;
+}
+
 a.more {
   color: #000;
   padding: 0 15px;
@@ -78,16 +82,21 @@ section {
   padding-bottom: 60px;
 }
 
-.subscribe {
+.subscribe, .subscribe-2 {
   background: #e7ad46 url("../img/bg-simmetryFit.png") no-repeat;
   min-height: 330px;
   background-size: 100%;
   color: #fff;
 }
-.subscribe input.form-control {
+.subscribe input.form-control, .subscribe-2 input.form-control {
   margin-bottom: 15px;
   border: 1px solid #fff;
   border-radius: 0;
+}
+
+.subscribe-2 {
+  background: url("../img/bg-subscribe.jpg") no-repeat bottom;
+  background-size: cover;
 }
 
 ul.brand {
@@ -109,6 +118,10 @@ ul.brand li {
   padding-right: 1rem;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+}
+
 .method, .review {
   background: #d5de4f;
 }
@@ -117,9 +130,26 @@ ul.brand li {
   background: #e7ad46;
 }
 
+.bg-double {
+  background: #e7ad46;
+}
+
+.sm-bg {
+  background: #f3e179;
+}
+
+.bg-shop {
+  background: url("../img/bg-shop.jpg") no-repeat;
+  background-size: cover;
+}
+
 .price {
   font-weight: bold;
   font-size: 1.25rem;
+}
+
+.main-price {
+  font-size: 2.2rem;
 }
 
 .extra {
@@ -130,6 +160,9 @@ ul.brand li {
 .extra .card-text {
   text-transform: uppercase;
   font-size: 0.8rem;
+}
+.extra .price {
+  font-size: 1.8rem;
 }
 
 .advantages .item {
@@ -169,8 +202,8 @@ ul.brand li {
   padding: 10px;
 }
 .advantages .card img {
-  height: 250px;
-  width: auto;
+  height: 150px;
+  width: 150px;
 }
 
 .discount .card-body.wrap {
@@ -218,6 +251,7 @@ ul.brand li {
   font-size: 1.5rem;
   font-weight: normal;
   text-transform: uppercase;
+  color: #fff;
 }
 .questions .card, .questions .card-header {
   background-color: #ca6946;
@@ -227,6 +261,113 @@ ul.brand li {
   background-color: #fff;
   border-radius: 21px;
   color: #74b87b;
+}
+
+.why {
+  background: #fff;
+}
+.why p {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.why .why-corrector1 {
+  margin-top: -40px;
+  padding: 0 0 0 20px;
+}
+.why .why-corrector2 {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+}
+.why .why-arrow {
+  background: url("../img/corrector-arrow.png") no-repeat 90% 52%;
+}
+
+.mobile-user-menu {
+  display: none;
+}
+.mobile-user-menu .mobile-nav {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  display: none;
+  color: #000;
+}
+.mobile-user-menu label {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 40;
+  overflow: scroll;
+}
+.mobile-user-menu .top-block {
+  height: 40px;
+}
+.mobile-user-menu .nav-item {
+  width: 100%;
+}
+.mobile-user-menu .nav-item ul {
+  padding: 0 0 0 40px;
+}
+.mobile-user-menu .close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 400;
+  color: #fff;
+}
+.mobile-user-menu #mobile-menu:checked + label {
+  width: 100%;
+  min-height: 100%;
+}
+.mobile-user-menu #mobile-menu:checked + label > .mobile-user-menu .close, .mobile-user-menu #mobile-menu:checked + label > .mobile-user-menu .mobile-logo, .mobile-user-menu #mobile-menu:checked + label > .mobile-nav {
+  display: block;
+}
+.mobile-user-menu #mobile-menu:checked + label > .close:active {
+  display: none;
+}
+.mobile-user-menu .nav-border-top {
+  border-top: 1px solid #d4d9d9;
+}
+.mobile-user-menu .mobile-logo {
+  width: 80px;
+  margin: 7px 0 0 23px;
+}
+
+.shop-group-items .card-main {
+  position: absolute;
+  width: 200px;
+}
+.shop-group-items .item-1 {
+  top: 80px;
+  left: 54%;
+}
+.shop-group-items .item-2 {
+  top: 140px;
+  left: 78%;
+}
+.shop-group-items .item-3 {
+  top: 340px;
+  left: 78%;
+}
+.shop-group-items .item-4 {
+  top: 440px;
+  left: 54%;
+}
+.shop-group-items .price {
+  background: #74b87b;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+  display: inline-block;
 }
 
 footer {
@@ -243,9 +384,30 @@ footer {
     width: 70%;
     margin: 0 auto 20px;
   }
+
+  .advantages .card img {
+    height: 250px;
+    width: auto;
+  }
+
+  .mobile-user-menu {
+    display: none;
+  }
+
+  .bg-double {
+    background: url("../img/bg_double.png") repeat-y top center;
+  }
+
+  .sm-bg {
+    background: none;
+  }
+
+  .why {
+    background: #e7ad46 url("../img/corrector-bg01.gif") repeat-x top left;
+  }
 }
 @media (min-width: 1200px) {
-  section {
+  section, .navbar {
     padding-left: 5rem;
     padding-right: 5rem;
   }

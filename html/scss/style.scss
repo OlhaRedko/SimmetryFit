@@ -42,6 +42,7 @@ a:hover, .btn-link:hover {
 .site-header a {
     color: #000
 }
+.logo { padding-left: 15px }
 a.more {
     color: #000;
     padding: 0 15px;
@@ -77,13 +78,14 @@ section {
     padding-top: 60px;
     padding-bottom: 60px
 }
-.subscribe {
+.subscribe, .subscribe-2 {
     background:$bg-color-sec url("../img/bg-simmetryFit.png") no-repeat;
     min-height: 330px;
     background-size: 100%;
     color: #fff;
     input.form-control { margin-bottom: 15px; border:1px solid #fff;border-radius:0;  }
 }
+.subscribe-2 { background: url("../img/bg-subscribe.jpg") no-repeat bottom; background-size: cover }
 
 ul.brand {
     list-style-type: none;
@@ -102,17 +104,23 @@ ul.brand {
         padding-right: 1rem
     }
 }
+.navbar-light .navbar-nav .nav-link { color: #000 }
 .method, .review {
     background: $bg-color-primary
 }
 .about {
     background: $bg-color-sec
 }
-
+.bg-double { background:$bg-color-sec; }
+.sm-bg { background: #f3e179 }
+.bg-shop { background: url("../img/bg-shop.jpg") no-repeat; background-size: cover; }
 .price {
     font-weight: bold;
     font-size: 1.25rem
 }
+.main-price {
+    font-size: 2.2rem
+} 
 
 .extra {
     border: 6px dashed #f3d6a2;
@@ -122,6 +130,7 @@ ul.brand {
         text-transform: uppercase;
         font-size: 0.8rem;
     }
+    .price { font-size: 1.8rem }
 }
 .advantages {
     .item {
@@ -161,9 +170,7 @@ ul.brand {
         }
     }
 
-    .card img {
-        height: 250px;
-        width: auto;
+    .card img {height: 150px; width: 150px; 
         
     }
 
@@ -180,10 +187,89 @@ ul.brand {
 }
 
 .questions { background-color:$bg-color-secondary;
-.card-header { cursor: pointer; font-size: 1.5rem; font-weight: normal; text-transform: uppercase; }
+.card-header { cursor: pointer; font-size: 1.5rem; font-weight: normal; text-transform: uppercase; color: #fff}
 .card, .card-header {background-color:$bg-color-secondary}
 .card-header i { padding: 10px 12px; background-color: #fff; border-radius: 21px; color:$brand-color  }
 }
+.why { background:#fff;
+    p { font-size: 18px; text-transform: uppercase; } 
+    .why-corrector1 { margin-top: -40px; padding: 0 0 0 20px }
+    .why-corrector2 { position: absolute; top: 15px; left: 40px }
+    .why-arrow { background: url("../img/corrector-arrow.png") no-repeat 90% 52%; }
+}
+
+.mobile-user-menu {
+    display:none;
+    .mobile-nav {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        display: none;
+        color: #000;
+    }
+    label {
+        background: #fff;
+
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        z-index: 40;
+        overflow: scroll;
+    }
+    .top-block {
+        height: 40px;
+
+    }
+    .nav-item {
+        width: 100%;
+        ul {
+            padding: 0 0 0 40px
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 400;
+        color: #fff
+    }
+
+    #mobile-menu:checked+label {
+        width: 100%;
+        min-height: 100%;
+    }
+    #mobile-menu:checked+label>.mobile-user-menu .close, #mobile-menu:checked+label>.mobile-user-menu .mobile-logo, #mobile-menu:checked+label>.mobile-nav {
+        display: block;
+    }
+    #mobile-menu:checked+label>.close:active {
+        display: none
+    }
+    .nav-border-top {
+        border-top: 1px solid #d4d9d9;
+    }
+    .mobile-logo {
+        width: 80px;
+        margin: 7px 0 0 23px
+    }
+}
+
+.shop-group-items {
+    .card-main { position: absolute; width: 200px }
+    .item-1 { top:80px; left:54% }
+    .item-2 { top:140px; left:78% }
+    .item-3 { top:340px; left:78% }
+    .item-4 { top:440px; left:54% }
+    .price { background:$brand-color; border-radius: 20px; padding: 5px 10px; margin: 0 0 10px 0; display: inline-block; }
+}
+
 footer { background-color: $bg-color-footer; color:#fff; }
 // Средние девайсы («таблетки», >= 768px)
 @media (min-width: 768px) {
@@ -194,9 +280,15 @@ footer { background-color: $bg-color-footer; color:#fff; }
         width: 70%;
         margin: 0 auto 20px
     }
+    .advantages .card img { height: 250px; width: auto }
+    .mobile-user-menu {
+        display: none;}
+        .bg-double { background: url("../img/bg_double.png") repeat-y top center; }
+        .sm-bg { background: none}
+        .why {background:#e7ad46 url("../img/corrector-bg01.gif") repeat-x top left;}
 }
 @media (min-width: 1200px) {
-    section {
+    section, .navbar {
         padding-left: 5rem;
         padding-right: 5rem
     }
